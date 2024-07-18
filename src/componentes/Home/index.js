@@ -6,12 +6,22 @@ import 'slick-carousel/slick/slick-theme.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 
-
-
-
-
-
+var images = [{
+  src:"/assets/images/0.jpeg",
+  title:"Rental Hub",
+  description:"Make Your Life More Comfortable"
+}, {
+  src:"/assets/images/1.jpeg",
+  // title:"test2",
+  // description:"desc12"
+},{
+  src:"/assets/images/2.jpeg",
+  // title:"test3",
+  // description:"desc3"
+}]
 class Home extends Component {  
+
+ 
   render() {  
     const settings = {  
       infinite: true,
@@ -38,7 +48,21 @@ class Home extends Component {
         
         <Slider {...settings}>  
         
-          <div className="slide">  
+        {images.map((item, index) => {
+          return    <div className="slide" key={index}>  
+          <img src={item.src} alt="Description of image 1" />  
+          <div className='img-caption'>  
+            <h1>{item.title}</h1>  
+            <p>{item.description}</p>  
+{
+  item.title && item.description && 
+  <spam>_________________</spam>
+
+}
+            </div> 
+        </div>  
+        })}
+          {/* <div className="slide">  
             <img src="/assets/images/0.jpeg" alt="Description of image 1" />  
             <div className='img-caption'>  
               <h1>Rental Hub</h1>  
@@ -61,7 +85,7 @@ class Home extends Component {
               <p>Make Your Life More Comfortable</p>  
               <spam>_________________</spam>
               </div> 
-          </div> 
+          </div>  */}
           
 
             
