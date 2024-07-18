@@ -32,7 +32,7 @@ class Home extends Component {
     };  
 
     return (  
-      <div className="carousel-container">  
+      <div className="carousel-container" style={{overflow:"hidden"}}>  
         
       <div className='slider'>
         
