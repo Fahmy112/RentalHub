@@ -11,7 +11,7 @@ const Navbar = () =>    {
         <div className="container">
            <div className='navbar'>
               <div className="logo">
-                  <Link to='Index'> 
+                  <Link to='Home'> 
                     <img src="/assets/images/logo.jpeg" className='logo-img' alt='imglogo'/>
                   </Link>
               </div>
@@ -19,7 +19,7 @@ const Navbar = () =>    {
 
               <div >
               <ul className='ul-list'>
-                  <li className="list-item"><Link to="Index">Home</Link></li>
+                  <li className="list-item"><Link to="Home">Home</Link></li>
                   <li className="list-item"><a href="#">AboutUs</a></li>
                   <li className="list-item"><a href="#">Our Destinations</a></li>
                   <li className="list-item"><a href="#">Jobs</a></li>

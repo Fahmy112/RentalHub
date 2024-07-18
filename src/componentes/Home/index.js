@@ -28,7 +28,7 @@ class Home extends Component {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 2000,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 1000,
     pauseOnFocus: false,
     pauseOnHover:true,
@@ -49,7 +49,7 @@ class Home extends Component {
         <Slider {...settings}>  
         
         {images.map((item, index) => {
-          return    <div className="slide" key={index}>  
+          return  <div className={`slide ${index = 2 ? "animation":""}`} key={index}>  
           <img src={item.src} alt="Description of image 1" />  
           <div className='img-caption'>  
             <h1>{item.title}</h1>  

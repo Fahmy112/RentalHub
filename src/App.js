@@ -8,6 +8,7 @@ import TopBar from './componentes/TopBar';
 
 import Navbar from './componentes/Navbar'
 import Index from './componentes/Index'
+import Home from './componentes/Home'
 
 
 
@@ -19,8 +20,9 @@ class App extends Component {
       <BrowserRouter className='App'>
              <TopBar/>
              <Navbar/>
+             
              <Routes>
-             <Route path='/' Component={Index}/>
+             <Route path='Home' Component={Home}/>
              <Route path='contact' Component={Contact}/>
              </Routes>
       </BrowserRouter>
