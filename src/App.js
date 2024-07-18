@@ -20,7 +20,7 @@ class App extends Component {
              <TopBar/>
              <Navbar/>
              <Routes>
-             <Route path='index' Component={Index}/>
+             <Route path='/' Component={Index}/>
              <Route path='contact' Component={Contact}/>
              </Routes>
       </BrowserRouter>
