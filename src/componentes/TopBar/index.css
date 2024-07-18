@@ -1,0 +1,27 @@
+.main{
+    position: relative;
+    top: 0;
+    height: 45px;
+    width: 100%;
+    background-color: black;
+    padding-top: 10px;
+}
+
+i{
+    padding-right: 10px;
+    
+    color: #ffffb1;
+    float: left;
+    cursor: pointer;
+}
+.right i{
+    position: relative;
+    top: 5px;
+}
+.link{
+    float: right;
+    text-decoration: none;
+    color: #ffffb1;
+    font-weight: bold;
+    font-size: 18px;
+}
