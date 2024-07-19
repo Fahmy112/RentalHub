@@ -1,36 +1,34 @@
-.main-navbar {
-    padding: 20px 0;
-    overflow: hidden;
-    position: relative;
-    
-    height: 200px;
-    
+.navbar>.container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: center;
 }
 .navbar{
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 0 5px 0;
+    flex-direction: column;
+    z-index: 9999;
 }
-
+.navbar-brand{
+    position: relative;
+  
+}
 .main-navbar .logo {
     position: relative;
     height: 100px;
     
-    
 }
 
-.main-navbar .logo .logo-img{
+.main-navbar .logo .logo-img {
     
     height: 100%;
     border-top-left-radius: 50px ;
     border-bottom-right-radius: 30px ;
 }
-
-
-.main-navbar .ul-list {
+.ul-list {
     list-style: none;
     position: relative;
     display: flex;
@@ -40,26 +38,15 @@
     padding: 25px;
     
 }
-
-.main-navbar .ul-list .list-item {
+.list-item {
     border-right: 1px solid black;
     display: inline-block;
-    width: 160px;
+    width: 140px;
     text-align: center;
-    
-}
-.main-navbar .list-item:nth-child(6) {
-    border:none;
-    
-}
-
-.main-navbar .ul-list .list-item a {
     color: #b89461; 
-    text-decoration: none;
-    padding: 10px 15px;
     font-weight: bold;
 }
-
-.main-navbar .ul-list .list-item a:hover {
-    color: black
+.list-item:nth-child(6) {
+    border:none;
+    
 }

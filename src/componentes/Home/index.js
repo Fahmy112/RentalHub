@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';  
 import 'slick-carousel/slick/slick-theme.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Carousel } from 'react-responsive-carousel';
+import '../media-query/media-query.css'
 
 var images = [{
   src:"/assets/images/0.jpeg",
@@ -12,17 +12,17 @@ var images = [{
   description:"Make Your Life More Comfortable"
 }, {
   src:"/assets/images/1.jpeg",
-  // title:"test2",
+   title:"Rental Hub",
   // description:"desc12"
 },{
   src:"/assets/images/2.jpeg",
-  // title:"test3",
+   title:"Rental Hub",
   // description:"desc3"
 }]
 class Home extends Component {  
-
- 
-  render() {  
+  render() {
+    
+    
     const settings = {  
       infinite: true,
     slidesToShow: 1,
@@ -30,7 +30,7 @@ class Home extends Component {
     speed: 2000,
     autoplay: false,
     autoplaySpeed: 1000,
-    pauseOnFocus: false,
+    pauseOnFocus: true,
     pauseOnHover:true,
     cssEase: 'linear',
     centerMode: true,
@@ -42,14 +42,14 @@ class Home extends Component {
     };  
 
     return (  
-      <div className="carousel-container" style={{overflow:"hidden"}}>  
+      <div className="carousel-container" >  
         
       <div className='slider'>
         
         <Slider {...settings}>  
         
         {images.map((item, index) => {
-          return  <div className={`slide ${index = 2 ? "animation":""}`} key={index}>  
+          return  <div className={`slide ${index == 0 ? "animation":""}`} key={index}>  
           <img src={item.src} alt="Description of image 1" />  
           <div className='img-caption'>  
             <h1>{item.title}</h1>  
