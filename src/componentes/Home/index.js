@@ -1,103 +1,66 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import back from "../../assets/back.svg";
+import next from "../../assets/back.svg";
+import 'react-slideshow-image/dist/styles.css';
 import '../Home/index.css' 
-import Slider from 'react-slick';  
-import 'slick-carousel/slick/slick.css';  
-import 'slick-carousel/slick/slick-theme.css';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import '../media-query/media-query.css'
 
-var images = [{
-  src:"/assets/images/0.jpeg",
-  title:"Rental Hub",
-  description:"Make Your Life More Comfortable"
-}, {
-  src:"/assets/images/1.jpeg",
-   title:"Rental Hub",
-  // description:"desc12"
-},{
-  src:"/assets/images/2.jpeg",
-   title:"Rental Hub",
-  // description:"desc3"
-}]
-class Home extends Component {  
-  render() {
-    
-    
-    const settings = {  
-      infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 2000,
-    autoplay: false,
-    autoplaySpeed: 1000,
-    pauseOnFocus: true,
-    pauseOnHover:true,
-    cssEase: 'linear',
-    centerMode: true,
-    //centerMode: false,
-    dots: false,
-    prevArrow: false,
-    nextArrow: false,
-    variableWidth: true 
-    };  
 
-    return (  
-      <div className="carousel-container" >  
-        
-      <div className='slider'>
-        
-        <Slider {...settings}>  
-        
-        {images.map((item, index) => {
-          return  <div className={`slide ${index == 0 ? "animation":""}`} key={index}>  
-          <img src={item.src} alt="Description of image 1" />  
-          <div className='img-caption'>  
-            <h1>{item.title}</h1>  
-            <p>{item.description}</p>  
-{
-  item.title && item.description && 
-  <spam>_________________</spam>
+   
+const imagesArray = [
+  "../../assets/0.jpeg",
+  "../../assets/1.jpeg",
+  "https://littlelosttravel.com/wp-content/uploads/2020/11/Finland.jpg",
+  "https://littlelosttravel.com/wp-content/uploads/2020/11/Hawaii-jelle-de-gie-u.jpg",
+  " https://littlelosttravel.com/wp-content/uploads/2020/11/Morocco-sergey-pesterev-u.jpg",
+];
 
+function Home() {
+  const [activeImage, setActiveImage] = useState(0);
+
+  const goToNextImage = () => {
+    if (activeImage === imagesArray.length - 1) {
+      setActiveImage(0);
+      return;
+    }
+    setActiveImage(activeImage + 1);
+  };
+
+  const goToPreviousImage = () => {
+    if (activeImage === 0) {
+      setActiveImage(imagesArray.length - 1);
+      return;
+    }
+    setActiveImage(activeImage - 1);
+  };
+
+  return (
+    <main>
+      <section>
+        <div>
+          <img
+            src={back}
+            alt=""
+            width={50}
+            height={50}
+            className="icon-left"
+            onClick={goToPreviousImage}
+          />
+
+          <img
+            src={next}
+            alt=""
+            width={50}
+            height={50}
+            className="icon-right"
+            onClick={goToNextImage}
+          />
+          <img src={imagesArray[activeImage]} alt="" className="main-image" />
+        </div>
+      </section>
+    </main>
+  );
 }
-            </div> 
-        </div>  
-        })}
-          {/* <div className="slide">  
-            <img src="/assets/images/0.jpeg" alt="Description of image 1" />  
-            <div className='img-caption'>  
-              <h1>Rental Hub</h1>  
-              <p>Make Your Life More Comfortable</p>  
-              <spam>_________________</spam>
-              </div> 
-          </div>  
-          <div className="slide">  
-            <img src="/assets/images/1.jpeg" alt="Description of image 1" />  
-            <div className='img-caption'>  
-              <h1>Rental Hub</h1>  
-              <p>Make Your Life More Comfortable</p>  
-              <spam>_________________</spam>
-              </div> 
-          </div>  
-          <div className="slide">  
-            <img src="/assets/images/2.jpeg" alt="Description of image 1" />  
-            <div className='img-caption'>  
-              <h1>Rental Hub</h1>  
-              <p>Make Your Life More Comfortable</p>  
-              <spam>_________________</spam>
-              </div> 
-          </div>  */}
-          
 
-            
-
-        </Slider>
+export default Home;
       
-        </div>  
-      </div>  
-    );  
-  }  
-}  
 
-export default Home;  
-
- 

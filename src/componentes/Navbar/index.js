@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../media-query/media-query.css'
+
 import Container from 'react-bootstrap/Container'; 
 import Nav from 'react-bootstrap/Nav'; 
 import Navbar from 'react-bootstrap/Navbar'; 
@@ -15,7 +15,7 @@ function NavbarComponent  ()   {
                 <Navbar.Brand href="Home" > 
                 <div className="logo">
                       <Link to='Home' > 
-                        <img src="/assets/images/logo.jpeg" className='logo-img' alt='imglogo'/>
+                        <img src="../../logo.jpeg" className='logo-img' alt='imglogo'/>
                       </Link>
                   </div>
                     </Navbar.Brand> 

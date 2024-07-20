@@ -7,7 +7,7 @@ import Contact from './componentes/Contact'
 import TopBar from './componentes/TopBar';
 
 import Navbar from './componentes/Navbar'
-import Index from './componentes/Index'
+
 import Home from './componentes/Home'
 
 

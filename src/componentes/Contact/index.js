@@ -10,17 +10,17 @@ const Contact = () => {
   return (
     <div className='contact'>
       <video autoPlay loop muted className="bg-vid"><source src={BgVideo} type="video/mp4" /> </video>
-    <div className='container'>
+    <div className='contact-content'>
       
       
     <Form className='contact-form'>
       <h1 >Contact Us</h1>
       <div className='d-flex'>
-      <Form.Group className="name-form1 mb-3 " controlId="exampleForm.ControlInput1">
+      <Form.Group className="name-form1 mb-3 me-2 " controlId="exampleForm.ControlInput1">
         <Form.Control type="text" placeholder="First Name" />
       </Form.Group>
 
-      <Form.Group className="name-form2 mb-3 " controlId="exampleForm.ControlInput1">
+      <Form.Group className="name-form2 mb-3 ms-2" controlId="exampleForm.ControlInput1">
         <Form.Control type="text" placeholder="Second Name" />
       </Form.Group>
       </div>
@@ -33,17 +33,14 @@ const Contact = () => {
         <Form.Control type="tel" placeholder=" Phone Number" />
       </Form.Group>
 
-      <Form.Group className="email-form mb-3  " controlId="exampleForm.ControlInput1">
-        <Form.Control type="email" placeholder="name@example.com " />
-      </Form.Group>
 
       <div className= ' d-flex '>
       <Dropdown>
-      <Dropdown.Toggle className='button1 ' variant="success" id="dropdown-basic">
-        Your Favourite Type
+      <Dropdown.Toggle  className='me-2' id="dropdown-basic">
+        Your Type
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className='dropdown1'>
+      <Dropdown.Menu >
         <Dropdown.Item href="#/action-1">Villa</Dropdown.Item>
         <Dropdown.Item href="#/action-2">Twin House</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Town House</Dropdown.Item>
@@ -54,11 +51,11 @@ const Contact = () => {
     </Dropdown>
 
     <Dropdown>
-      <Dropdown.Toggle className='button1' variant="success" id="dropdown-basic">
-        Your Favourite Area
+      <Dropdown.Toggle  className='ms-2' id="dropdown-basic">
+        Your Area
       </Dropdown.Toggle>
 
-      <Dropdown.Menu className='dropdown1'>
+      <Dropdown.Menu >
         <Dropdown.Item href="#/action-1">New Cairo</Dropdown.Item>
         <Dropdown.Item href="#/action-2">October</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Mostakbal City</Dropdown.Item>
@@ -70,10 +67,10 @@ const Contact = () => {
 
       </div>
       <Form.Group className="mb-3 mt-3  " controlId="exampleForm.ControlTextarea1">
-        <Form.Control  as="textarea" rows={3} placeholder="Your Descison"/>
+        <Form.Control  as="textarea" rows={1} placeholder="Your Descison"/>
             
             <div className='submit'>
-            <Button className='submit-button txt-align-c mt-3' variant="outline-success">Submit</Button>
+            <Button className='submit-button txt-align-c mt-3' variant="outline-success" id='btn'>Submit</Button>
             </div>
       </Form.Group>
       
