@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import back from "../../assets/back.svg";
-import next from "../../assets/back.svg";
+import back from './back.svg';
+import next from './back.svg';
 import 'react-slideshow-image/dist/styles.css';
 import '../Home/index.css' 
 
@@ -9,9 +9,13 @@ import '../Home/index.css'
 const imagesArray = [
   "../../assets/0.jpeg",
   "../../assets/1.jpeg",
-  "https://littlelosttravel.com/wp-content/uploads/2020/11/Finland.jpg",
-  "https://littlelosttravel.com/wp-content/uploads/2020/11/Hawaii-jelle-de-gie-u.jpg",
-  " https://littlelosttravel.com/wp-content/uploads/2020/11/Morocco-sergey-pesterev-u.jpg",
+  "../../assets/2.jpeg",
+  "../../assets/3.jpg",
+  "../../assets/4.jpg",
+  "../../assets/5.jpg",
+  "../../assets/6.jpg",
+  "../../assets/7.jpg",
+ 
 ];
 
 function Home() {
@@ -54,7 +58,12 @@ function Home() {
             className="icon-right"
             onClick={goToNextImage}
           />
-          <img src={imagesArray[activeImage]} alt="" className="main-image" />
+          <img  src={imagesArray[activeImage]} alt="no-image" className="main-image" />
+          <div className='Caption'>
+          <h1>Rental Hub</h1>
+          <p>Make Your Dream </p>
+          <spam>___________</spam>
+          </div>
         </div>
       </section>
     </main>
