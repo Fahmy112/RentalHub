@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'; 
@@ -14,7 +15,7 @@ function NavbarComponent  ()   {
                 <Navbar.Brand href="Home" > 
                 <div className="logo">
                       <Link to='Home' > 
-                        <img src='../../../public/assets/logo.jpg' alt='imglogo' className='img-logo'/>
+                        <img src='/logo.jpg' alt='imglogo' className='logo-img' />
                       </Link>
                   </div>
                     </Navbar.Brand> 

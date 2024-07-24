@@ -6,10 +6,6 @@ import TopBar from './componentes/TopBar';
 import Navbar from './componentes/Navbar'
 import Home from './componentes/Home'
 
-
-
-
-
 class App extends Component {
   render() {
     return (
