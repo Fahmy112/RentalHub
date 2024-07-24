@@ -1,0 +1,31 @@
+.first-div{
+    padding-top: 25px;
+}
+.main-section{
+    color: #b89461;
+}
+.main-section a {
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+.contact-div a{
+    color:#b89461;
+}
+.contact-div p{
+    color:whitesmoke;
+}
+.address-div h5{
+    color:#b89461;
+}
+.address-div p{
+    color:whitesmoke;
+}
+.links-div h5{
+    color:#b89461;
+}
+
+.form-div p{
+    color:whitesmoke;
+
+}

@@ -5,7 +5,7 @@ import Contact from './componentes/Contact'
 import TopBar from './componentes/TopBar';
 import Navbar from './componentes/Navbar'
 import Home from './componentes/Home'
-
+import Footer from './componentes/Footer'
 class App extends Component {
   render() {
     return (
@@ -17,6 +17,8 @@ class App extends Component {
              <Route path='Home' Component={Home}/>
              <Route path='contact' Component={Contact}/>
              </Routes>
+             <Footer/>
+
       </BrowserRouter>
       
       

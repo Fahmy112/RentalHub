@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-
-import Home from './../Home'
+import React from 'react';
 
 
 
 
-class Index extends Component {
-  render() {
+
+
+function Index()  {
+  
     return (
-    <Home/>
+    
 )
   }  
-}
+
 
 export default Index;
